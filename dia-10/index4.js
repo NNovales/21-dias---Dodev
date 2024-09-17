@@ -6,23 +6,14 @@ Faça com que o array tenha no máximo 10 elementos
 Para iniciar a sequência use o (número inserido -1)
 */
 
-let numero = []
-let numeroInserido = parseInt(prompt("Digite um número inteiro positivo: "))
+let numero = parseInt(prompt("Digite um número inteiro e positivo"))
+let fibonacci = []
+fibonacci[0] = numero - 1
+fibonacci[1] = numero
 
-function fibonacci(n) {
-    let fib = [0, 1]; //inicia com os dois primeiros números de fibonacci
+//CRIANDO LOOP
+for (let i = 2; i <10; i++){
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]
 }
 
-for (let i = 2; i < n; i++){
-    fib[i] = fib[i - 1] + fib[i- 2];
-}
-
-return fib;
-
-let n = 10;
-console.log(fibonacci(n));
-
-
-
-
-
+console.log("Fibonacci: " + fibonacci)
